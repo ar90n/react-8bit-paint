@@ -1,7 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import Modal from 'react-modal'
-import { useModal } from 'react-modal-hook'
 import { Title } from '../components/title'
 import { range } from '../libs/util'
 import { Canvas, CanvasSize } from '../components/canvas'
@@ -39,24 +37,6 @@ const Main = styled.div`
 
 export const Edit: React.FC = () => {
   const [appState, setAppState] = useAppState()
-  const [showModal, hideModal] = useModal(() => (
-    <Modal
-      isOpen
-      style={{
-        content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-        },
-      }}
-      onRequestClose={hideModal}
-    >
-        <div>fsdfasfasdfasdf</div>
-      <ColorPicker onColorPick={color => {}} />
-    </Modal>
-  ))
 
   const onClickPixel = ({
     row,
@@ -70,17 +50,27 @@ export const Edit: React.FC = () => {
     const pixelIndex = row * canvasSize + col
     setAppState(
       (appState: AppState): AppState => {
-        const data = appState.data.map((v, idx) => {
-          const inc = +(idx === pixelIndex)
-          return ((v + inc) % 4) as PaletteIndex
-        })
+        const data = [...appState.data]
+        data[pixelIndex] = ((data[pixelIndex] + 1) % 4) as PaletteIndex
         return { ...appState, data }
       }
     )
   }
 
-  const onClickColor = (idx: PaletteIndex) => {
-    showModal()
+  const onPickColor = ({
+    idx,
+    color,
+  }: {
+    idx: PaletteIndex
+    color: PaletteColor
+  }) => {
+    setAppState(
+      (appState: AppState): AppState => {
+        const palette = [...appState.palette]
+        palette[idx] = color
+        return { ...appState, palette }
+      }
+    )
   }
   return (
     <Main>
@@ -98,7 +88,7 @@ export const Edit: React.FC = () => {
           palette={appState.palette}
           onClickPixel={onClickPixel}
         />
-        <Palette colors={appState.palette} onClickColor={onClickColor} />
+        <Palette colors={appState.palette} onPickColor={onPickColor} />
       </Contents>
       <Url state={appState} />
     </Main>

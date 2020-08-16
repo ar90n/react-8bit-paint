@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
 const appState = createInitialState()
 
-Modal.setAppElement('#root')
+Modal.setAppElement('#modal')
 
 render(
   <React.StrictMode>
