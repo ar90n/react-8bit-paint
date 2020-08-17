@@ -60,7 +60,7 @@ type ColorCardProps = {
   }) => void
 }
 
-const getModalContent = (elm: Element | null) => {
+const getModalContent = (elm: Element | null): React.CSSProperties => {
   const defaultContent = {
     position: 'absolute',
     top: '50%',
@@ -72,7 +72,7 @@ const getModalContent = (elm: Element | null) => {
     borderRadius: '6px',
     padding: '20px',
     overflow: 'hidden',
-  }
+  } as const
 
   if (elm === null) {
     return defaultContent
@@ -189,7 +189,10 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ onPickColor }) => {
 
   const ps = colors.map(cs => {
     const cc = cs.map(c => (
-      <PickerColorSample color={c} onClick={() => onPickColor(c)} />
+      <PickerColorSample
+        color={c as PaletteColor}
+        onClick={() => onPickColor(c as PaletteColor)}
+      />
     ))
     return <div> {cc} </div>
   })

@@ -81,5 +81,6 @@
         "tslint-config-prettier": "^1.18.0",
         "tslint-react": "^4.0.0",
         "typescript": "^3.4.4"
-    }
+    },
+    "postinstall": "rm -rf node_modules/@types/react-native"
 }
