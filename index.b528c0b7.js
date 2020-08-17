@@ -710,12 +710,12 @@ if ("development" !== "production") {
     module.exports = runtime;
   })();
 }
-},{}],"62NCs":[function(require,module,exports) {
+},{}],"2Wwtm":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "016d7308a32f2a432588ffb1d0d1d194";
+module.bundle.HMR_BUNDLE_ID = "b528c0b72fc5ad442093b18d1550e959";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH */
 
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1009,9 +1009,9 @@ try {
 
   var _reactModalHook = require("react-modal-hook");
 
-  var _App = require("./App");
+  var _App = require("./containers/App");
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/index.tsx";
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/index.tsx";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1046,14 +1046,14 @@ try {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 34,
       columnNumber: 3
     }
   }, /*#__PURE__*/React.createElement(GlobalStyle, {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 35,
       columnNumber: 5
     }
   }), /*#__PURE__*/React.createElement(_AppContext.AppStateProvider, {
@@ -1061,21 +1061,21 @@ try {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 36,
       columnNumber: 5
     }
   }, /*#__PURE__*/React.createElement(_reactModalHook.ModalProvider, {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 37,
       columnNumber: 7
     }
   }, /*#__PURE__*/React.createElement(_App.App, {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 38,
       columnNumber: 9
     }
   })))), document.getElementById('root'));
@@ -1088,7 +1088,7 @@ try {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"5WtM0","react-dom":"34OJP","styled-components":"01MQW","./contexts/AppContext":"cgTPM","react-modal":"3QXW6","react-modal-hook":"pJEBw","./App":"71xop","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"5WtM0":[function(require,module,exports) {
+},{"react":"5WtM0","react-dom":"34OJP","styled-components":"01MQW","./contexts/AppContext":"cgTPM","react-modal":"3QXW6","react-modal-hook":"pJEBw","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc","./containers/App":"23iLr"}],"5WtM0":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -32519,7 +32519,7 @@ try {
   var _canvas = require("../components/canvas");
 
   var _s = $RefreshSig$(),
-      _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/contexts/AppContext.tsx",
+      _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/contexts/AppContext.tsx",
       _s2 = $RefreshSig$();
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -32529,8 +32529,7 @@ try {
   function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
   const initialState = {
-    palette: ['#DB2B00', '#CB4F0F', '#F77BFF', '#FF77B7'],
-    //data: range(canvasSizes[0] * canvasSizes[0]).map(() => 0),
+    palette: ['#000000', '#757575', '#BCBCBC', '#FFFFFF'],
     data: (0, _util.range)(_canvas.canvasSizes[1] * _canvas.canvasSizes[1]).map(() => 0)
   };
 
@@ -32567,7 +32566,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 43,
         columnNumber: 5
       }
     }, /*#__PURE__*/React.createElement(SetAppStateContext.Provider, {
@@ -32575,7 +32574,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 44,
         columnNumber: 7
       }
     }, props.children));
@@ -33311,7 +33310,7 @@ Object.defineProperty(exports, "CanvasSize", {
 Object.defineProperty(exports, "CanvasProps", {
   enumerable: true,
   get: function () {
-    return _Canvas2.CanvasProps;
+    return _Canvas2.Props;
   }
 });
 Object.defineProperty(exports, "Canvas", {
@@ -33354,7 +33353,7 @@ try {
 
   var _Canvas = require("./Canvas.type");
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/components/canvas/Canvas.tsx";
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/canvas/Canvas.tsx";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33402,11 +33401,7 @@ try {
       const row = Math.floor(idx / canvasSize);
       const col = idx % canvasSize;
 
-      const onClick = () => onClickPixel({
-        row,
-        col,
-        canvasSize
-      });
+      const onClick = () => onClickPixel(idx);
 
       return /*#__PURE__*/React.createElement(Pixel, {
         key: `${row}_${col}`,
@@ -33418,7 +33413,7 @@ try {
         __self: void 0,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 54,
           columnNumber: 7
         }
       });
@@ -33428,7 +33423,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 65,
         columnNumber: 10
       }
     }, " ", pixels, " ");
@@ -36101,55 +36096,90 @@ exports.ModalContext = ModalContext;
 exports.ModalProvider = ModalProvider;
 exports.useModal = useModal;
 
-},{"react":"5WtM0","react-dom":"34OJP"}],"71xop":[function(require,module,exports) {
+},{"react":"5WtM0","react-dom":"34OJP"}],"23iLr":[function(require,module,exports) {
 "use strict";
 
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.App = void 0;
 
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
+var _edit = require("../components/edit");
 
-try {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
+var _AppContext = require("../contexts/AppContext");
+
+var _s = $RefreshSig$();
+
+const App = () => {
+  _s();
+
+  const [appState, setAppState] = (0, _AppContext.useAppState)();
+
+  const onClickPixel = idx => {
+    setAppState(appState => {
+      const data = [...appState.data];
+      data[idx] = (data[idx] + 1) % 4;
+      return { ...appState,
+        data
+      };
+    });
+  };
+
+  const onPickColor = ({
+    idx,
+    color
+  }) => {
+    setAppState(appState => {
+      const palette = [...appState.palette];
+      palette[idx] = color;
+      return { ...appState,
+        palette
+      };
+    });
+  };
+
+  return (0, _edit.Edit)({
+    appState,
+    onClickPixel,
+    onPickColor
   });
-  exports.App = void 0;
+};
 
-  var React = _interopRequireWildcard(require("react"));
+exports.App = App;
 
-  var _Edit = require("./containers/Edit");
+_s(App, "9FhdVW3dbJ8nIZtIpuJiHOw8kSo=", false, function () {
+  return [_AppContext.useAppState];
+});
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/App.tsx";
+_c = App;
 
-  function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _c;
 
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-  const App = () => /*#__PURE__*/React.createElement(_Edit.Edit, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 26
-    }
-  });
-
-  exports.App = App;
-  _c = App;
-
-  var _c;
-
-  $RefreshReg$(_c, "App");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"5WtM0","./containers/Edit":"4sOlF","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"4sOlF":[function(require,module,exports) {
+$RefreshReg$(_c, "App");
+},{"../components/edit":"keLUf","../contexts/AppContext":"cgTPM"}],"keLUf":[function(require,module,exports) {
 "use strict";
 
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "EditProps", {
+  enumerable: true,
+  get: function () {
+    return _Edit.Props;
+  }
+});
+Object.defineProperty(exports, "Edit", {
+  enumerable: true,
+  get: function () {
+    return _Edit.Edit;
+  }
+});
+
+var _Edit = require("./Edit");
+},{"./Edit":"4Okrz"}],"4Okrz":[function(require,module,exports) {
+"use strict";
+
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36165,18 +36195,15 @@ try {
 
   var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-  var _title = require("../components/title");
+  var _title = require("../title");
 
-  var _canvas = require("../components/canvas");
+  var _canvas = require("../canvas");
 
-  var _palette = require("../components/palette");
+  var _palette = require("../palette");
 
-  var _AppContext = require("../contexts/AppContext");
+  var _url = require("../url");
 
-  var _url = require("../components/url");
-
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/containers/Edit.tsx",
-      _s = $RefreshSig$();
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/edit/Edit.tsx";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36203,93 +36230,65 @@ try {
   width: 80%;
 `;
 
-  const Edit = () => {
-    _s();
-
-    const [appState, setAppState] = (0, _AppContext.useAppState)();
-
-    const onClickPixel = ({
-      row,
-      col,
-      canvasSize
-    }) => {
-      const pixelIndex = row * canvasSize + col;
-      setAppState(appState => {
-        const data = [...appState.data];
-        data[pixelIndex] = (data[pixelIndex] + 1) % 4;
-        return { ...appState,
-          data
-        };
-      });
-    };
-
-    const onPickColor = ({
-      idx,
-      color
-    }) => {
-      setAppState(appState => {
-        const palette = [...appState.palette];
-        palette[idx] = color;
-        return { ...appState,
-          palette
-        };
-      });
-    };
-
+  const Edit = ({
+    appState,
+    onClickPixel,
+    onPickColor
+  }) => {
     return /*#__PURE__*/React.createElement(Main, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 42,
         columnNumber: 5
       }
     }, /*#__PURE__*/React.createElement(_title.Title, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 43,
         columnNumber: 7
       }
     }), /*#__PURE__*/React.createElement(HowTo, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 44,
         columnNumber: 7
       }
     }, /*#__PURE__*/React.createElement("ul", {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 45,
         columnNumber: 9
       }
     }, /*#__PURE__*/React.createElement("li", {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
+        lineNumber: 46,
         columnNumber: 11
       }
     }, " Click any pixels to increment its color index "), /*#__PURE__*/React.createElement("li", {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81,
+        lineNumber: 47,
         columnNumber: 11
       }
     }, " Click any palette colors to change its colors "), /*#__PURE__*/React.createElement("li", {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 48,
         columnNumber: 11
       }
     }, " The result is saved as URL in the bottom of this page"))), /*#__PURE__*/React.createElement(Contents, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 51,
         columnNumber: 7
       }
     }, /*#__PURE__*/React.createElement(_canvas.Canvas, {
@@ -36299,7 +36298,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86,
+        lineNumber: 52,
         columnNumber: 9
       }
     }), /*#__PURE__*/React.createElement(_palette.Palette, {
@@ -36308,7 +36307,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 57,
         columnNumber: 9
       }
     })), /*#__PURE__*/React.createElement(_url.Url, {
@@ -36316,18 +36315,13 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 59,
         columnNumber: 7
       }
     }));
   };
 
   exports.Edit = Edit;
-
-  _s(Edit, "9FhdVW3dbJ8nIZtIpuJiHOw8kSo=", false, function () {
-    return [_AppContext.useAppState];
-  });
-
   _c4 = Edit;
 
   var _c, _c2, _c3, _c4;
@@ -36341,7 +36335,7 @@ try {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"5WtM0","styled-components":"01MQW","../components/title":"4iQwP","../components/canvas":"5Wj9b","../components/palette":"28a1P","../contexts/AppContext":"cgTPM","../components/url":"4phe7","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"4iQwP":[function(require,module,exports) {
+},{"react":"5WtM0","styled-components":"01MQW","../title":"4iQwP","../canvas":"5Wj9b","../palette":"28a1P","../url":"4phe7","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"4iQwP":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36374,7 +36368,7 @@ try {
 
   var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/components/title/Title.tsx";
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/title/Title.tsx";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36434,19 +36428,7 @@ Object.defineProperty(exports, "Palette", {
 Object.defineProperty(exports, "PaletteProps", {
   enumerable: true,
   get: function () {
-    return _Palette.PaletteProps;
-  }
-});
-Object.defineProperty(exports, "ColorPicker", {
-  enumerable: true,
-  get: function () {
-    return _Palette.ColorPicker;
-  }
-});
-Object.defineProperty(exports, "ColorPickerProps", {
-  enumerable: true,
-  get: function () {
-    return _Palette.ColorPickerProps;
+    return _Palette.Props;
   }
 });
 Object.defineProperty(exports, "paletteIndice", {
@@ -36490,7 +36472,7 @@ try {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.ColorPicker = exports.Palette = void 0;
+  exports.Palette = void 0;
 
   var _react = _interopRequireWildcard(require("react"));
 
@@ -36500,7 +36482,9 @@ try {
 
   var _reactModalHook = require("react-modal-hook");
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/components/palette/Palette.tsx",
+  var _ColorPicker = require("./ColorPicker");
+
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/palette/Palette.tsx",
       _s = $RefreshSig$();
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -36509,14 +36493,12 @@ try {
 
   function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-  const ColorSample = _styledComponents.default.div`
+  const PaletteColorSample = _c = _styledComponents.default.div`
   margin: 1px;
   border-radius: 6px;
   background-color: ${({
     color
   }) => color};
-`;
-  const PaletteColorSample = _c = (0, _styledComponents.default)(ColorSample)`
   width: 100%;
   height: 100%;
   grid-row: 1 / 3;
@@ -36596,10 +36578,10 @@ try {
         __self: void 0,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 90,
           columnNumber: 7
         }
-      }, /*#__PURE__*/_react.default.createElement(ColorPicker, {
+      }, /*#__PURE__*/_react.default.createElement(_ColorPicker.ColorPicker, {
         onPickColor: color => {
           onPickColor({
             idx,
@@ -36610,7 +36592,7 @@ try {
         __self: void 0,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 101,
           columnNumber: 9
         }
       }));
@@ -36624,7 +36606,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121,
+        lineNumber: 115,
         columnNumber: 5
       }
     }, /*#__PURE__*/_react.default.createElement(PaletteColorSample, {
@@ -36634,21 +36616,21 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122,
+        lineNumber: 116,
         columnNumber: 7
       }
     }), /*#__PURE__*/_react.default.createElement(Index, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123,
+        lineNumber: 117,
         columnNumber: 7
       }
     }, " ", `${idx}`, " "), /*#__PURE__*/_react.default.createElement(ColorCode, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124,
+        lineNumber: 118,
         columnNumber: 7
       }
     }, " ", color, " "));
@@ -36681,7 +36663,7 @@ try {
         __self: void 0,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152,
+          lineNumber: 146,
           columnNumber: 7
         }
       });
@@ -36690,7 +36672,7 @@ try {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161,
+        lineNumber: 155,
         columnNumber: 10
       }
     }, colorCards, " ");
@@ -36698,52 +36680,8 @@ try {
 
   exports.Palette = Palette;
   _c7 = Palette;
-  const PickerColorSample = _c8 = (0, _styledComponents.default)(ColorSample)`
-  width: 24px;
-  height: 24px;
-`;
 
-  const ColorPicker = ({
-    onPickColor
-  }) => {
-    const colors = [['#000000', '#757575', '#BCBCBC', '#FFFFFF'], ['#271B8F', '#0073EF', '#3FBFFF', '#ABE7FF'], ['#0000AB', '#233BEF', '#5F73FF', '#C7D7FF'], ['#47009F', '#8300F3', '#A78BFD', '#D7CBFF'], ['#8F0077', '#BF00BF', '#F77BFF', '#FFC7FF'], ['#AB0013', '#E7005B', '#FF77B7', '#FFC7DB'], ['#A70000', '#DB2B00', '#FF7763', '#FFBFB3'], ['#7F0B00', '#CB4F0F', '#FF9B3B', '#FFDBAB'], ['#432F00', '#8B7300', '#F3BF3F', '#FFE7A3'], ['#004700', '#009700', '#83D313', '#E3FFA3'], ['#005100', '#00AB00', '#4FDF4B', '#ABF3BF'], ['#003F17', '#00933B', '#58F898', '#B3FFCF'], ['#1B3F5F', '#00838B', '#00EBDB', '#9FFFF3']];
-    const ps = colors.map(cs => {
-      const cc = cs.map(c => /*#__PURE__*/_react.default.createElement(PickerColorSample, {
-        color: c,
-        onClick: () => onPickColor(c),
-        __self: void 0,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 192,
-          columnNumber: 7
-        }
-      }));
-      return /*#__PURE__*/_react.default.createElement("div", {
-        __self: void 0,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 197,
-          columnNumber: 12
-        }
-      }, " ", cc, " ");
-    });
-    return /*#__PURE__*/_react.default.createElement("div", {
-      style: {
-        display: 'flex'
-      },
-      __self: void 0,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 200,
-        columnNumber: 10
-      }
-    }, " ", ps, " ");
-  };
-
-  exports.ColorPicker = ColorPicker;
-  _c9 = ColorPicker;
-
-  var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9;
+  var _c, _c2, _c3, _c4, _c5, _c6, _c7;
 
   $RefreshReg$(_c, "PaletteColorSample");
   $RefreshReg$(_c2, "ColorCode");
@@ -36752,14 +36690,105 @@ try {
   $RefreshReg$(_c5, "ColorCard");
   $RefreshReg$(_c6, "Container");
   $RefreshReg$(_c7, "Palette");
-  $RefreshReg$(_c8, "PickerColorSample");
-  $RefreshReg$(_c9, "ColorPicker");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"5WtM0","styled-components":"01MQW","react-modal":"3QXW6","react-modal-hook":"pJEBw","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"7FrI4":[function(require,module,exports) {
+},{"react":"5WtM0","styled-components":"01MQW","react-modal":"3QXW6","react-modal-hook":"pJEBw","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc","./ColorPicker":"1phX8"}],"1phX8":[function(require,module,exports) {
+"use strict";
+
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ColorPicker = void 0;
+
+  var _react = _interopRequireDefault(require("react"));
+
+  var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+  var _Palette = require("./Palette.type");
+
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/palette/ColorPicker.tsx";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  const PickerColorSample = _c = _styledComponents.default.div`
+  margin: 1px;
+  border-radius: 6px;
+  background-color: ${({
+    color
+  }) => color};
+  width: 24px;
+  height: 24px;
+`;
+  const Container = _c2 = _styledComponents.default.div`
+  display: flex;
+`;
+
+  const getPaletteColorGrid = () => {
+    return _Palette.paletteColors.reduce((acc, cur, idx) => {
+      if (idx % 4 == 0) {
+        acc.push([]);
+      }
+
+      acc[acc.length - 1].push(cur);
+      return acc;
+    }, []);
+  };
+
+  const ColorPicker = ({
+    onPickColor
+  }) => {
+    const colors = getPaletteColorGrid();
+    const colorSamples = colors.map(cs => /*#__PURE__*/_react.default.createElement("div", {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 5
+      }
+    }, (() => cs.map(c => /*#__PURE__*/_react.default.createElement(PickerColorSample, {
+      color: c,
+      onClick: () => onPickColor(c),
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 11
+      }
+    })))()));
+    return /*#__PURE__*/_react.default.createElement(Container, {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 10
+      }
+    }, " ", colorSamples, " ");
+  };
+
+  exports.ColorPicker = ColorPicker;
+  _c3 = ColorPicker;
+
+  var _c, _c2, _c3;
+
+  $RefreshReg$(_c, "PickerColorSample");
+  $RefreshReg$(_c2, "Container");
+  $RefreshReg$(_c3, "ColorPicker");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"5WtM0","styled-components":"01MQW","./Palette.type":"7FrI4","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"7FrI4":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36768,7 +36797,20 @@ Object.defineProperty(exports, "__esModule", {
 exports.paletteColors = exports.paletteIndice = void 0;
 const paletteIndice = [0, 1, 2, 3];
 exports.paletteIndice = paletteIndice;
-const paletteColors = ['#757575', '#271B8F', '#0000AB', '#47009F', '#BCBCBC', '#0073EF', '#233BEF', '#8300F3', '#FFFFFF', '#3FBFFF', '#5F73FF', '#A78BFD', '#FFFFFF', '#ABE7FF', '#C7D7FF', '#D7CBFF', '#8F0077', '#AB0013', '#A70000', '#7F0B00', '#BF00BF', '#E7005B', '#DB2B00', '#CB4F0F', '#F77BFF', '#FF77B7', '#FF7763', '#FF9B3B', '#FFC7FF', '#FFC7DB', '#FFBFB3', '#FFDBAB', '#432F00', '#004700', '#005100', '#003F17', '#8B7300', '#009700', '#00AB00', '#00933B', '#F3BF3F', '#83D313', '#4FDF4B', '#58F898', '#FFE7A3', '#E3FFA3', '#ABF3BF', '#B3FFCF', '#1B3F5F', '#000000', '#00838B', '#00EBDB', '#757575', '#9FFFF3', '#BCBCBC'];
+const paletteColors = ['#000000', '#757575', '#BCBCBC', '#FFFFFF', //
+'#271B8F', '#0073EF', '#3FBFFF', '#ABE7FF', //
+'#0000AB', '#233BEF', '#5F73FF', '#C7D7FF', //
+'#47009F', '#8300F3', '#A78BFD', '#D7CBFF', //
+'#8F0077', '#BF00BF', '#F77BFF', '#FFC7FF', //
+'#AB0013', '#E7005B', '#FF77B7', '#FFC7DB', //
+'#A70000', '#DB2B00', '#FF7763', '#FFBFB3', //
+'#7F0B00', '#CB4F0F', '#FF9B3B', '#FFDBAB', //
+'#432F00', '#8B7300', '#F3BF3F', '#FFE7A3', //
+'#004700', '#009700', '#83D313', '#E3FFA3', //
+'#005100', '#00AB00', '#4FDF4B', '#ABF3BF', //
+'#003F17', '#00933B', '#58F898', '#B3FFCF', //
+'#1B3F5F', '#00838B', '#00EBDB', '#9FFFF3' //
+];
 exports.paletteColors = paletteColors;
 },{}],"4phe7":[function(require,module,exports) {
 "use strict";
@@ -36779,7 +36821,7 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "UrlProps", {
   enumerable: true,
   get: function () {
-    return _Url.UrlProps;
+    return _Url.Props;
   }
 });
 Object.defineProperty(exports, "Url", {
@@ -36813,7 +36855,7 @@ try {
 
   var _copyToClipboard = _interopRequireDefault(require("copy-to-clipboard"));
 
-  var _jsxFileName = "/Users/masahiro/workspace/react-8bit-paint/src/components/url/Url.tsx";
+  var _jsxFileName = "/home/argon/workspace/react-8bit-paint/src/components/url/Url.tsx";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36875,7 +36917,7 @@ try {
 
   const createCrushedUrl = state => {
     const crushed = JSONCrush.JSONCrush(JSON.stringify(state));
-    return `${window.location.origin}/?state=${crushed}`;
+    return `${window.location.origin}${window.location.pathname}?state=${crushed}`;
   };
 
   const Url = ({
@@ -36909,14 +36951,14 @@ try {
         lineNumber: 65,
         columnNumber: 7
       }
-    }, ' ', /*#__PURE__*/React.createElement(CopyIcon, {
+    }, /*#__PURE__*/React.createElement(CopyIcon, {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 66,
         columnNumber: 9
       }
-    }), ' '));
+    })));
   };
 
   exports.Url = Url;
@@ -37090,6 +37132,6 @@ module.exports = function () {
   };
 };
 
-},{}]},{},["347E4","62NCs","5T8Uc"], "5T8Uc", null)
+},{}]},{},["347E4","2Wwtm","5T8Uc"], "5T8Uc", null)
 
-//# sourceMappingURL=index.016d7308.js.map
+//# sourceMappingURL=index.b528c0b7.js.map
