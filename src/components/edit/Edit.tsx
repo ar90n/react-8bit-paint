@@ -44,7 +44,7 @@ export const Edit: React.FC<Props> = ({
       <HowTo>
         <ul>
           <li> Click any pixels to increment its color index </li>
-          <li> Click any palette colors to change its colors </li>
+          <li> Click any palette colors to change its color </li>
           <li> The result is saved as URL in the bottom of this page</li>
         </ul>
       </HowTo>
