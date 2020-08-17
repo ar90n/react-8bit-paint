@@ -4,18 +4,12 @@ import Modal from 'react-modal'
 import { useModal } from 'react-modal-hook'
 
 import { PaletteColor, PaletteIndex } from './Palette.type'
+import { ColorPicker } from './ColorPicker'
 
-type ColorSampleProps = {
-  color: PaletteColor
-}
-
-const ColorSample = styled.div`
+const PaletteColorSample = styled.div`
   margin: 1px;
   border-radius: 6px;
-  background-color: ${({ color }: ColorSampleProps) => color};
-`
-
-const PaletteColorSample = styled(ColorSample)`
+  background-color: ${({ color }: { color: PaletteColor }) => color};
   width: 100%;
   height: 100%;
   grid-row: 1 / 3;
@@ -134,7 +128,7 @@ const Container = styled.div`
   background-color: #b2b2b2;
 `
 
-export type PaletteProps = {
+export type Props = {
   colors: PaletteColor[]
   onPickColor: ({
     idx,
@@ -145,7 +139,7 @@ export type PaletteProps = {
   }) => void
 }
 
-export const Palette: React.FC<PaletteProps> = ({ colors, onPickColor }) => {
+export const Palette: React.FC<Props> = ({ colors, onPickColor }) => {
   const colorCards = colors.map((color, idx) => {
     const paletteIndex = idx as PaletteIndex
     return (
@@ -159,43 +153,4 @@ export const Palette: React.FC<PaletteProps> = ({ colors, onPickColor }) => {
   })
 
   return <Container>{colorCards} </Container>
-}
-
-const PickerColorSample = styled(ColorSample)`
-  width: 24px;
-  height: 24px;
-`
-
-export type ColorPickerProps = {
-  onPickColor: (color: PaletteColor) => void
-}
-
-export const ColorPicker: React.FC<ColorPickerProps> = ({ onPickColor }) => {
-  const colors = [
-    ['#000000', '#757575', '#BCBCBC', '#FFFFFF'],
-    ['#271B8F', '#0073EF', '#3FBFFF', '#ABE7FF'],
-    ['#0000AB', '#233BEF', '#5F73FF', '#C7D7FF'],
-    ['#47009F', '#8300F3', '#A78BFD', '#D7CBFF'],
-    ['#8F0077', '#BF00BF', '#F77BFF', '#FFC7FF'],
-    ['#AB0013', '#E7005B', '#FF77B7', '#FFC7DB'],
-    ['#A70000', '#DB2B00', '#FF7763', '#FFBFB3'],
-    ['#7F0B00', '#CB4F0F', '#FF9B3B', '#FFDBAB'],
-    ['#432F00', '#8B7300', '#F3BF3F', '#FFE7A3'],
-    ['#004700', '#009700', '#83D313', '#E3FFA3'],
-    ['#005100', '#00AB00', '#4FDF4B', '#ABF3BF'],
-    ['#003F17', '#00933B', '#58F898', '#B3FFCF'],
-    ['#1B3F5F', '#00838B', '#00EBDB', '#9FFFF3'],
-  ]
-
-  const ps = colors.map(cs => {
-    const cc = cs.map(c => (
-      <PickerColorSample
-        color={c as PaletteColor}
-        onClick={() => onPickColor(c as PaletteColor)}
-      />
-    ))
-    return <div> {cc} </div>
-  })
-
-  return <div style={{ display: 'flex' }}> {ps} </div>
 }

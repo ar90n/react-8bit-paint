@@ -38,22 +38,18 @@ const getCanvasSize = (data: PaletteIndex[]): CanvasSize => {
   return canvasSize
 }
 
-export type CanvasProps = {
+export type Props = {
   data: PaletteIndex[]
   palette: PaletteColor[]
-  onClickPixel: (args: { col: number; row: number; canvasSize: number }) => void
+  onClickPixel: (idx: number) => void
 }
 
-export const Canvas: React.FC<CanvasProps> = ({
-  data,
-  palette,
-  onClickPixel,
-}) => {
+export const Canvas: React.FC<Props> = ({ data, palette, onClickPixel }) => {
   const canvasSize = getCanvasSize(data)
   const pixels = data.map((code, idx) => {
     const row = Math.floor(idx / canvasSize)
     const col = idx % canvasSize
-    const onClick = () => onClickPixel({ row, col, canvasSize })
+    const onClick = () => onClickPixel(idx)
     return (
       <Pixel
         key={`${row}_${col}`}

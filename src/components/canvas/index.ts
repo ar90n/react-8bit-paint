@@ -1,4 +1,4 @@
 import { canvasSizes, CanvasSize } from './Canvas.type'
-import { CanvasProps, Canvas } from './Canvas'
+import { Props as CanvasProps, Canvas } from './Canvas'
 
 export { canvasSizes, CanvasSize, CanvasProps, Canvas }

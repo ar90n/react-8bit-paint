@@ -13,8 +13,7 @@ export type AppState = {
 }
 
 const initialState: AppState = {
-  palette: ['#DB2B00', '#CB4F0F', '#F77BFF', '#FF77B7'],
-  //data: range(canvasSizes[0] * canvasSizes[0]).map(() => 0),
+  palette: ['#000000', '#757575', '#BCBCBC', '#FFFFFF'],
   data: range(canvasSizes[1] * canvasSizes[1]).map(() => 0),
 }
 

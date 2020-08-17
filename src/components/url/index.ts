@@ -1,3 +1,3 @@
-import { UrlProps, Url } from './Url'
+import { Props as UrlProps, Url } from './Url'
 
 export { UrlProps, Url }

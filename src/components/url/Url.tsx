@@ -5,7 +5,7 @@ import copy from 'copy-to-clipboard'
 
 import { AppState } from '../../contexts/AppContext'
 
-export type UrlProps = {
+export type Props = {
   state: AppState
 }
 
@@ -56,15 +56,14 @@ const createCrushedUrl = (state: AppState) => {
   return `${window.location.origin}${window.location.pathname}?state=${crushed}`
 }
 
-export const Url: React.FC<UrlProps> = ({ state }) => {
+export const Url: React.FC<Props> = ({ state }) => {
   const url = createCrushedUrl(state)
   const onClick = () => copy(url)
   return (
     <Container>
       <UrlInput value={url} readOnly />
       <CopyButton onClick={onClick}>
-        {' '}
-        <CopyIcon />{' '}
+        <CopyIcon />
       </CopyButton>
     </Container>
   )

@@ -1,17 +1,10 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { createGlobalStyle } from 'styled-components'
-//import './index.css'
-
-import { range } from './libs/util'
-import {
-  AppStateProvider,
-  AppState,
-  createInitialState,
-} from './contexts/AppContext'
+import { AppStateProvider, createInitialState } from './contexts/AppContext'
 import Modal from 'react-modal'
 import { ModalProvider } from 'react-modal-hook'
-import { App } from './App'
+import { App } from './containers/App'
 
 const GlobalStyle = createGlobalStyle`
   body {

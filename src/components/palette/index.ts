@@ -1,4 +1,4 @@
-import { Palette, PaletteProps, ColorPicker, ColorPickerProps } from './Palette'
+import { Palette, Props as PaletteProps } from './Palette'
 import {
   paletteIndice,
   PaletteIndex,
@@ -13,6 +13,4 @@ export {
   PaletteIndex,
   paletteColors,
   PaletteColor,
-  ColorPicker,
-  ColorPickerProps,
 }
