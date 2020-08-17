@@ -53,7 +53,7 @@ const CopyIcon = () => (
 
 const createCrushedUrl = (state: AppState) => {
   const crushed = JSONCrush.JSONCrush(JSON.stringify(state))
-  return `${window.location.origin}/?state=${crushed}`
+  return `${window.location.origin}${window.location.pathname}?state=${crushed}`
 }
 
 export const Url: React.FC<UrlProps> = ({ state }) => {
