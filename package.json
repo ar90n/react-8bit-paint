@@ -17,7 +17,8 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "type-check": "tsc --noEmit",
-        "type-check:watch": "tsc --noEmit --watch"
+        "type-check:watch": "tsc --noEmit --watch",
+        "deploy": "gh-pages -d dist"
     },
     "husky": {
         "hooks": {
@@ -52,7 +53,7 @@
     "dependencies": {
         "copy-to-clipboard": "^3.3.1",
         "jsoncrush": "^0.1.0",
-        "parcel": "^2.0.0-nightly.368",
+        "parcel": "^1.12.4",
         "query-string": "^6.13.1",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
